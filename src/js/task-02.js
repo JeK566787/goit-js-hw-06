@@ -10,27 +10,27 @@ const ingredients = [
 // const liEl = document.createElement("li");
 // liEl.classList.add("item");
 // liEl.textContent = "Potatoes";
-// ingrEl.appendChild(liEl);
+// ingredientsEl.appendChild(liEl);
 
-// const ingrEl = document.querySelector("#ingredients");
+// const ingredientsEl = document.querySelector("#ingredients");
 // for (let item of ingredients) {
 //   let liEl = document.createElement("li");
 //   liEl.textContent = item;
 //   liEl.classList.add("item");
-//   ingrEl.appendChild(liEl);
+//   ingredientsEl.appendChild(liEl);
 // }
 
-// const ingrEl = document.querySelector("#ingredients");
+// const ingredientsEl = document.querySelector("#ingredients");
 // ingredients.map((item) => {
 //   let liEl = document.createElement("li");
 //   liEl.textContent = item;
 //   liEl.classList.add("item");
-//   ingrEl.append(liEl);
+//   ingredientsEl.append(liEl);
 // });
 
 // ------------------------------------------------------------
-const ingrEl = document.querySelector("#ingredients");
-let test = (items) => {
+const ingredientsEl = document.querySelector("#ingredients");
+let makeLiEl = (items) => {
   return items.map((item) => {
     let liEl = document.createElement("li");
     liEl.textContent = item;
@@ -39,10 +39,6 @@ let test = (items) => {
     return liEl;
   });
 };
-let result = test(ingredients);
+let LiArray = makeLiEl(ingredients);
 
-ingrEl.append(...result);
-
-console.log(test(ingredients));
-console.log(result);
-console.log(ingrEl);
+ingredientsEl.append(...LiArray);
