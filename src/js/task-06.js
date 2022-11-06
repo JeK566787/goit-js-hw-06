@@ -1,12 +1,17 @@
-let inputEl = document.querySelector("#validation-input");
-console.dir(inputEl);
+const inputEl = document.querySelector("#validation-input");
 
-// inputEl.addEventListener("blur", check);
+const maxNumber = Number(inputEl.dataset.length);
+// let numberValue = Number(inputEl.value);
 
-// function check() {
-//   if (inputEl.value > inputEl.data - length) {
-//   }
-// }
+inputEl.addEventListener("blur", onBorderColorBlur);
 
-// nodeValue
-// :
+function onBorderColorBlur() {
+  // inputEl.classList.add("valid");
+  if (inputEl.value.length === maxNumber) {
+    inputEl.classList.add("valid");
+    inputEl.classList.remove("invalid");
+  } else {
+    inputEl.classList.remove("valid");
+    inputEl.classList.add("invalid");
+  }
+}

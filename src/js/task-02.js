@@ -39,6 +39,6 @@ let makeLiEl = (items) => {
     return liEl;
   });
 };
-let LiArray = makeLiEl(ingredients);
+const LiArray = makeLiEl(ingredients);
 
 ingredientsEl.append(...LiArray);
