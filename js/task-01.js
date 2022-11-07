@@ -5,7 +5,7 @@ const headingEl = document.querySelectorAll("h2");
 
 const subItemsEl = document.querySelectorAll(".item ul");
 
-subItemsEl.forEach((currentValue, index, array) => {
+subItemsEl.forEach((currentValue, index) => {
   console.log(`Category: ${headingEl[index].textContent}`);
   console.log(`Elements: ${currentValue.children.length}`);
 });
