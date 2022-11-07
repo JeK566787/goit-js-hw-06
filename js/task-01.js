@@ -5,8 +5,13 @@ const headingEl = document.querySelectorAll("h2");
 
 const subItemsEl = document.querySelectorAll(".item ul");
 
-for (let index = 0; index < subItemsEl.length; index++) {
-  // console.log(index);
+subItemsEl.forEach((currentValue, index, array) => {
   console.log(`Category: ${headingEl[index].textContent}`);
-  console.log(`Elements: ${subItemsEl[index].children.length}`);
-}
+  console.log(`Elements: ${currentValue.children.length}`);
+});
+
+// for (let index = 0; index < subItemsEl.length; index++) {
+//   // console.log(index);
+//   console.log(`Category: ${headingEl[index].textContent}`);
+//   console.log(`Elements: ${subItemsEl[index].children.length}`);
+// }

@@ -5,8 +5,9 @@ const bodyEl = document.querySelector("body");
 widgetEl.lastElementChild.addEventListener("click", onChangeColorClick);
 
 function onChangeColorClick() {
-  bodyEl.style.backgroundColor = getRandomHexColor();
-  colorHexEl.innerHTML = getRandomHexColor();
+  const randomColor = getRandomHexColor();
+  bodyEl.style.backgroundColor = randomColor;
+  colorHexEl.innerHTML = randomColor;
 }
 
 function getRandomHexColor() {
